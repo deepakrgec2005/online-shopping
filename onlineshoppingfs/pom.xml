@@ -10,6 +10,16 @@
   
   
   <dependencies>
+  
+   <dependency>
+   <groupId>net.dks</groupId>
+  <artifactId>shoppingbackendfs</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  </dependency>
+  
+  
+  
  <!-- https://mvnrepository.com/artifact/javaee/javaee-api -->
 <dependency>
     <groupId>javaee</groupId>
