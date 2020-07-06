@@ -1,6 +1,4 @@
 package net.dks.shoppingbackendfs.daoimpl;
-
-
 import org.hibernate.SessionFactory;
 import java.util.List;
 import org.hibernate.query.Query;

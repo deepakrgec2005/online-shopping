@@ -31,7 +31,7 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-public String getDsescription() {
+public String getDescription() {
 	return description;
 }
 public void setDescription(String dsescription) {

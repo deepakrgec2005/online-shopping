@@ -4,7 +4,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
-<spring:url var="imagess" value="/resources/imagse" />
+<spring:url var="images" value="/resources/images" />
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
 <!DOCTYPE html>
@@ -17,6 +17,9 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
+
+<meta name="_csrf" content="${_csrf.token}">
+<meta name="_csrf_header" content="${_csrf.headerName}">
 
 <title>Online Shopping - ${title }</title>
 <script>
@@ -52,17 +55,28 @@
 
 			<c:if test="${userClickContact ==true }">
 				<%@include file="contact.jsp"%>
-				<h1> INSIDE CONTACT</h1>
+				<h1>INSIDE CONTACT</h1>
 			</c:if>
 			<c:if
 				test="${userClickAllProducts == true or userClickCategoryProducts == true }">
 				<%@include file="listProducts.jsp"%>
-				 
+
 			</c:if>
 
 			<c:if test="${userClickShowProduct == true}">
 				<%@include file="singleProduct.jsp"%>
 			</c:if>
+
+			<c:if test="${userClickManageProducts == true}">
+				<%@include file="manageProducts.jsp"%>
+			</c:if>
+ 
+			<c:if test="${userClickShowCart == true}">
+			
+				<%@include file="cart.jsp"%>
+			 
+			</c:if>
+
 		</div>
 
 
